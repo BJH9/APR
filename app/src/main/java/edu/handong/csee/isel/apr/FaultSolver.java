@@ -1,4 +1,4 @@
-package edu.handong.apr2;
+package edu.handong.csee.isel.apr;
 
 /*코드를 수정하는 메소드들을 포함하는 클래스
  * 삭제, 수정, 삽입 기능을 가진 메소드들을 갖는다.

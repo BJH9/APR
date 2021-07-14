@@ -1,4 +1,4 @@
-package edu.handong.apr2;
+package edu.handong.csee.isel.apr;
 
 
 /*construcor를 활용해 정상코드와 버그코드를 입력받고 그 두 개를 비교한다.

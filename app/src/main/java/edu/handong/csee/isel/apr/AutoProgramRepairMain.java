@@ -1,4 +1,4 @@
-package edu.handong.apr2;
+package edu.handong.csee.isel.apr;
 
 public class AutoProgramRepairMain {
 

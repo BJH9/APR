@@ -1,4 +1,4 @@
-package edu.handong.apr2;
+package edu.handong.csee.isel.apr;
 import java.util.Scanner;
 
 /*constructor를 통해 테스트케이스들을 입력받는다. 
