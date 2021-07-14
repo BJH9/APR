@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class TestcaseFinder extends FaultSolver{
 
 	private static int i;
-	private String test1, test2, test3;
+	private String  test2, test3;
 	private static String[] arrayS1;
 	
 	public TestcaseFinder() {
@@ -21,8 +21,8 @@ public class TestcaseFinder extends FaultSolver{
 		i = 0;
 	}
 	
-	public TestcaseFinder(String t1, String t2, String t3) {
-		test1 = t1;
+	public TestcaseFinder(String t2, String t3) {
+		
 		test2 = t2;
 		test3 = t3;
 	}
@@ -77,6 +77,7 @@ public class TestcaseFinder extends FaultSolver{
 		int k;
 		Scanner sc = new Scanner(System.in);
 		k = sc.nextInt();
+		sc.close();
 		
 		fixS1(arrayS1[k]);
 		System.out.println(getS1());
