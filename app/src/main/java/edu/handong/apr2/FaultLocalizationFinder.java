@@ -1,5 +1,13 @@
 package edu.handong.apr2;
 
+
+/*construcor를 활용해 정상코드와 버그코드를 입력받고 그 두 개를 비교한다.
+ 만약 정상코드가 ep score를 받고 버그코드가 ef score 를 받으면 
+ 버그가 있고, faultlocalization 또한 가능한 것으로 판단해 1을 반환
+ 조건에 따라 버그 위치를 특정해 n에 저장
+ */
+
+
 public class FaultLocalizationFinder {
 
 	private static String s1, s2, originS1, score; //s1: 버그코드, s2:정상코드, originS1:처음 입력받은 s1(버그코드)의 값, score:bug가 발생했는지, 어디서 발생했는지 확인하기 위해 입력되는 점수

@@ -1,6 +1,11 @@
 package edu.handong.apr2;
 import java.util.Scanner;
 
+/*constructor를 통해 테스트케이스들을 입력받는다. 
+ * 테스트케이스를 갖고 버그코드에 조건에 맞는 수정을 해 코드에 적용해배고 조건을 모두 통과한 코드를 plausible code로 판단해 배열에 담는다.
+ * 사용자가 직접 번호를 눌러 수동적으로 correct patch를 선정한다.
+ */
+
 public class TestcaseFinder extends FaultSolver{
 
 	private static int i;
