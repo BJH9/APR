@@ -8,8 +8,7 @@ public class AutoProgramRepairMain {
 		 int p;
 		
 	    FaultLocalizationFinder Fl = new FaultLocalizationFinder("poeraqrq", "fdseabsd");
-	    FaultSolver Fs = new FaultSolver();
-	    TestcaseFinder Tf = new TestcaseFinder("pass", "aaapass", "sadfsadffds");
+	    TestcaseFinder Tf = new TestcaseFinder("aaapass", "sadfsadffds");
 	    
 	    input1 = Fl.gradeScore(Fl.getS1());
 	    input2 = Fl.gradeScore(Fl.getS2());
