@@ -24,13 +24,13 @@ public class TestcaseFinder extends FaultSolver{
 	
 	public void verifyTestcase(int t) {// testcases을 적용해 plausible patch를 찾는다
 		if(t == 0) {
-			removeFault(); // 특정 조건에서는 삭제
+			removeFault(); // 0이 입력되면 삭제함으로써 버그 수정
 		
 		
 		System.out.println("deleted: " + getS1());
 		}
 		
-		if(t == 1) {
+		if(t == 1) {//1이 입력되면 대체함으로써 버그 수정
 			
 				replaceFault(test2);
 			
@@ -39,7 +39,7 @@ public class TestcaseFinder extends FaultSolver{
 			System.out.println("replaced: " + getS1());
 		}
 		
-		if(t == 2) {
+		if(t == 2) {//2가 입력되면 삽입함으로써 버그를 수정
 			
 				insertFault(test3);
 			
@@ -52,7 +52,7 @@ public class TestcaseFinder extends FaultSolver{
 			
 		}
 		
-		if(getS1().contains("pass") || !getS1().contains("a")) {//pass라는 글자가 입력되어 있으면 디버깅 성공
+		if(getS1().contains("pass") || !getS1().contains("a")) {//pass라는 글자가 입력되어 있으면 plausible patch
 			arrayS1[i] = getS1();
 			i++;
 		}
@@ -66,7 +66,7 @@ public class TestcaseFinder extends FaultSolver{
 		System.out.println();
 	}
 	
-	public void validatePatch() {
+	public void validatePatch() {//correct patch
 		System.out.println("correct patch 선택");
 		
 		int k;

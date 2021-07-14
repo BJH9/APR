@@ -13,12 +13,12 @@ public class AutoProgramRepairMain {
 	    
 	    input1 = Fl.gradeScore(Fl.getS1());
 	    input2 = Fl.gradeScore(Fl.getS2());
-	    if(Fl.compareScore(input1, input2) != 1)
+	    if(Fl.compareScore(input1, input2) != 1)//1을 반환하지 않으면 결함이 없다.
 	    {
-	    	System.out.println("FL 실패");
+	    	System.out.println("결함이 없음");
 	    }
 	    
-	    else
+	    else//결함이 발생한 경우
 	    {
 	    	Fl.localizeFault(Fl.getS1());
 	    	

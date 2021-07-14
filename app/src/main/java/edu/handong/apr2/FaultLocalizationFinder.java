@@ -2,16 +2,16 @@ package edu.handong.apr2;
 
 public class FaultLocalizationFinder {
 
-	private static String s1, s2, originS1, score;
-	private static int n;
+	private static String s1, s2, originS1, score; //s1: 버그코드, s2:정상코드, originS1:처음 입력받은 s1(버그코드)의 값, score:bug가 발생했는지, 어디서 발생했는지 확인하기 위해 입력되는 점수
+	private static int n; //버그가 발생한 곳의 위치
 	//s1은 실패하는 코드, s2는 성공하는 코드 
-	public FaultLocalizationFinder()
+	public FaultLocalizationFinder() //버그가 발생한 곳의 위치 n과 점수 score를 초기화
 	{
 		n = 0;
 		score = null;
 	}
 	
-	public FaultLocalizationFinder(String a, String b)
+	public FaultLocalizationFinder(String a, String b)//버그코드,s1입력 정상코드,s2입력 originS1에 처음 값 입력
 	{
 		s1 = a;
 		s2 = b;
@@ -25,7 +25,7 @@ public class FaultLocalizationFinder {
 		return originS1;
 	}
 	
-	public void setOriginToS1()
+	public void setOriginToS1()//s1의 값을 처음 입력받은 값으로 되돌린다
 	{
 		s1 = originS1;
 	}
@@ -56,7 +56,7 @@ public class FaultLocalizationFinder {
 	
 	public int compareScore(String a, String b)//점수를 비교한다.
 	{
-		if((a.contains("ef")) && (b.contains("ep")))
+		if((a.contains("ef")) && (b.contains("ep")))//ef와 ep가 나오면 버그가 발생했다고 판단
 			return 1;
 		else
 			return 0;
@@ -80,7 +80,7 @@ public class FaultLocalizationFinder {
 		return s2;
 	}
 	
-	public void fixS1(String s)
+	public void fixS1(String s)//s1의 값을 변경
 	{
 		s1 = s;
 	}

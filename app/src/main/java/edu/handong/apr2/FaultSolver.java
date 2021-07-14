@@ -2,16 +2,16 @@ package edu.handong.apr2;
 
 public class FaultSolver extends FaultLocalizationFinder{
 
-	private static StringBuffer fixedS1;
-	private static String fixedSS;
+	private static StringBuffer fixedS1;//s1의 값을 변화시키기 위해 stringbuffer를 사용
+	private static String fixedSS;//stringbuffer값을 다시 string으로 바꿔서 여기에 저장 
 	
-	public FaultSolver()
+	public FaultSolver()//초기화
 	{
 		
 		fixedS1 = new StringBuffer(getS1());
 		fixedSS = null;
 	}
-	public void removeFault()
+	public void removeFault()//해당부분을 삭제함으로써 버그를 수정
 	{
 		fixedS1 = new StringBuffer(getOriginS1());
 		setOriginToS1();
@@ -21,7 +21,7 @@ public class FaultSolver extends FaultLocalizationFinder{
 		fixS1(fixedSS);
 	}
 	
-	public void replaceFault(String s)
+	public void replaceFault(String s)//해당 부분을 s로 대체함으로써 버그를 수정
 	{
 		fixedS1 = new StringBuffer(getOriginS1());
 		setOriginToS1();
@@ -31,7 +31,7 @@ public class FaultSolver extends FaultLocalizationFinder{
 		fixS1(fixedSS);
 	}
 	
-	public void insertFault(String s)
+	public void insertFault(String s)//해당 부분에 s를 삽입함으로써 버그를 수정
 	{
 		fixedS1 = new StringBuffer(getOriginS1());
 		setOriginToS1();
